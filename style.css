@@ -1,27 +1,140 @@
+/* إعدادات عامة */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #002f4b, #005377, #00a1d6);
+    color: #fff;
+    overflow: hidden;
 }
 
 header {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 2rem 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #005377;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #00d4ff;
 }
 
 main {
-    padding: 20px;
+    padding: 2rem;
+    text-align: center;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem 0;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
+}
+
+/* فقاعات */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in;
+    opacity: 0.7;
+}
+
+.bubble:nth-child(1) {
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    width: 25px;
+    height: 25px;
+}
+
+.bubble:nth-child(2) {
+    left: 40%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+    width: 15px;
+    height: 15px;
+}
+
+.bubble:nth-child(3) {
+    left: 60%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    width: 30px;
+    height: 30px;
+}
+
+.bubble:nth-child(4) {
+    left: 80%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    width: 20px;
+    height: 20px;
+}
+
+.bubble:nth-child(5) {
+    left: 50%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+    width: 18px;
+    height: 18px;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1200px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+
+/* تنسيق القوائم */
+.accordion-item {
+    background-color: #00d4ff;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.5rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.accordion-item:hover {
+    background-color: #008f99;
+}
+
+.content {
+    display: none;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    border-radius: 5px;
 }
