@@ -1,140 +1,145 @@
-/* إعدادات عامة */
+/* إعدادات الصفحة العامة */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #002f4b, #005377, #00a1d6);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #005082); /* خلفية بألوان المحيط */
     color: #fff;
-    overflow: hidden;
+    overflow: hidden; /* تعطيل التمرير افتراضيًا */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* ضبط الصفحة على كامل الشاشة */
 }
 
+/* ترويسة الموقع */
 header {
     text-align: center;
-    padding: 2rem 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid #005377;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: #00d4ff;
-}
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 1rem 0;
+    padding: 10px 20px;
+    background-color: #87CEFA; /* أزرق فاتح */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    width: 100%;
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px; /* تقليص المسافة بين العنوان والمحتوى */
 }
 
-/* فقاعات */
-.bubbles {
-    position: absolute;
+/* حاوية المحتوى */
+main {
+    margin-top: 120px; /* تقليص المسافة بين العنوان والمحتوى */
+    padding: 10px;
     width: 100%;
-    height: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* تصميم الأكورديون */
+.accordion-item {
+    background-color: #005082;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    margin: 0; /* إزالة الهوامش بين القوائم */
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px; /* إضافة مسافة متساوية بين القوائم */
+}
+
+.accordion-item:hover {
+    background-color: #0096c7;
+}
+
+/* محتوى الأكورديون */
+.content {
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 15px;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: padding 0.5s ease;
+}
+
+/* عرض النص عند الفتح */
+.content.show {
+    max-height: 500px; /* تخصيص المساحة بشكل مناسب */
+    opacity: 1;
+    padding: 15px;
+}
+
+/* تخصيص المسافة لكل محتوى */
+.accordion-item:nth-child(1) + .content {
+    max-height: 150px; /* مساحة مناسبة للمحتوى الأول */
+}
+
+.accordion-item:nth-child(2) + .content {
+    max-height: 200px; /* مساحة مناسبة للمحتوى الثاني */
+}
+
+.accordion-item:nth-child(3) + .content {
+    max-height: 180px; /* مساحة مناسبة للمحتوى الثالث */
+}
+
+.accordion-item:nth-child(4) + .content {
+    max-height: 250px; /* مساحة مناسبة للمحتوى الرابع */
+}
+
+.accordion-item:nth-child(5) + .content {
+    max-height: 200px; /* مساحة مناسبة للمحتوى الخامس */
+}
+
+/* الفقاعات */
+.bubbles {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bubble {
     position: absolute;
-    bottom: -100px;
+    bottom: -50px;
     width: 20px;
     height: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgba(173, 216, 230, 0.6);
     border-radius: 50%;
     animation: rise 5s infinite ease-in;
-    opacity: 0.7;
 }
 
-.bubble:nth-child(1) {
-    left: 20%;
-    animation-duration: 6s;
-    animation-delay: 1s;
-    width: 25px;
-    height: 25px;
-}
-
-.bubble:nth-child(2) {
-    left: 40%;
-    animation-duration: 7s;
-    animation-delay: 3s;
-    width: 15px;
-    height: 15px;
-}
-
-.bubble:nth-child(3) {
-    left: 60%;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    width: 30px;
-    height: 30px;
-}
-
-.bubble:nth-child(4) {
-    left: 80%;
-    animation-duration: 8s;
-    animation-delay: 4s;
-    width: 20px;
-    height: 20px;
-}
-
-.bubble:nth-child(5) {
-    left: 50%;
-    animation-duration: 10s;
-    animation-delay: 6s;
-    width: 18px;
-    height: 18px;
-}
+.bubble:nth-child(2) { left: 20%; animation-duration: 6s; width: 25px; height: 25px; }
+.bubble:nth-child(3) { left: 40%; animation-duration: 4s; width: 15px; height: 15px; }
+.bubble:nth-child(4) { left: 60%; animation-duration: 7s; width: 30px; height: 30px; }
+.bubble:nth-child(5) { left: 80%; animation-duration: 5s; width: 10px; height: 10px; }
 
 @keyframes rise {
-    0% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-1200px) scale(0.8);
-        opacity: 0;
-    }
+    0% { transform: translateY(100%); opacity: 0.8; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-
-/* تنسيق القوائم */
-.accordion-item {
-    background-color: #00d4ff;
-    color: #fff;
-    padding: 15px;
-    text-align: left;
-    font-size: 1.5rem;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    margin: 5px 0;
-    transition: background-color 0.3s;
-}
-
-.accordion-item:hover {
-    background-color: #008f99;
-}
-
-.content {
-    display: none;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 0 0 10px 0;
-    border-radius: 5px;
+/* الفوتر */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
 }
