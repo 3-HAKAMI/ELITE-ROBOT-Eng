@@ -1,139 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.E.O.E.D Elite Robot</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>🌊 Robot Exploring Ocean Environmental Data 🤖</h1>
-    </header>
-    <main>
-        <section id="content">
-            <div class="accordion">
-                <button class="accordion-item">What's The Problem And How We Gonna Solve It 🦐</button>
-                <div class="content">
-                    <h2>The Problem</h2>
-                    <p>
-                        Difficulty in identifying the raw materials located in the depths of the ocean and in gathering environmental data at various depths.
-                    </p>
-                    <h3>Problem Analysis</h3>
-                    <p>
-                        Humans have only explored about <strong>20%</strong> of the ocean’s depths! There is a high likelihood of undiscovered ecosystems and large quantities of raw materials we have yet to fully understand. These materials lie beneath this vast expanse, and in the future, we may develop machines to extract them—nothing is impossible!
-                    </p>
-                    <h2>The Solution</h2>
-                    <ul>
-                        <li>
-                            The robot uses sensors to measure pressure, oxygen levels (excluding the oxygen within the water itself), and other parameters at different depths.
-                        </li>
-                        <li>
-                            It employs wavelengths to detect raw materials (like iron) through each material’s <strong>spectral signature</strong>, which is the unique pattern of light absorption or emission by a particular material across different wavelengths.
-                        </li>
-                    </ul>
-                    <h3>Why Our Solution?</h3>
-                    <ul>
-                        <li><strong>Biomimicry in Design:</strong> Inspired by marine creatures, resembling a fish for better maneuverability.</li>
-                        <li><strong>Renewable Energy:</strong> Harnesses energy from wave motion or sunlight.</li>
-                        <li><strong>Low Cost:</strong> Economical compared to submarines and other large vehicles.</li>
-                        <li><strong>Eco-Friendly Materials:</strong> Made of lightweight, high-pressure-resistant, and environmentally friendly materials.</li>
-                    </ul>
-                    <h2>How Does This Robot Help Our World?</h2>
-                    <ul>
-                        <li>
-                            <strong>Supporting Scientific Research:</strong> Provides valuable data for scientists, sparking further studies.
-                        </li>
-                        <li>
-                            <strong>Enhancing Educational Curricula:</strong> Inspires students and leads to innovative ideas for resource extraction.
-                        </li>
-                    </ul>
-                    <h3>Summary</h3>
-                    <p>
-                        Our robot tackles challenges in exploring deep-sea ecosystems. Using sensors to measure salinity, temperature, pH, and other environmental data, it enables better understanding and potential utilization of oceanic resources.
-                    </p>
-                </div>
+/* إعدادات الصفحة العامة */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #005082); /* خلفية بألوان المحيط */
+    color: #fff;
+    overflow: hidden; /* تعطيل التمرير افتراضيًا */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* ضبط الصفحة على كامل الشاشة */
+}
 
-                <button class="accordion-item">About Us 👥</button>
-                <div class="content">
-                    <p>We are a robotics team consisting of four members: Abdullah Al-Dosari, Mishari Al-Qarni, Amer Hijan, and Abdulmajeed Hakami. Our team is named ELITE ROBOT, and we are all seventh-grade students at Al-Ibdaa School in Jubail Industrial City, Saudi Arabia. Everyone on the team is cooperative and values one another, and each member has outstanding and experienced skills. Some excel in assembly, like Abdullah and Mishari, others shine in programming, like Amer, and one of us stands out in project creation, like Abdulmajeed, who is also the creator of this website. GO ON ELITE ROBOT!</p>
-               </div>
+/* ترويسة الموقع */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #87CEFA; /* أزرق فاتح */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 
-                <button class="accordion-item">Our Achievements 🥇</button>
-                <div class="content">
-                    <p>So far, we haven’t achieved any major milestones, but we are determined to succeed in our mission. Stay tuned for updates!</p>
-               
-               
-               
-                   
-               </div>
+/* حاوية المحتوى */
+main {
+    margin-top: 150px; /* المسافة بين الهيدر والمحتوى */
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-                <button class="accordion-item">Books About Ocean 🌊</button>
-                <div class="content">
-                    <p>Looking for books about the ocean? Here are some recommendations:</p>
-                    <ul>
-                        <li><strong>The Soul of the Sea</strong> - Dr. Wallace J. Nichols: Explores the connection between the ocean and human well-being.</li>
-                        <li><strong>The Ocean of Life: The Fate of Man and the Sea</strong> - Callum Roberts: Discusses the impact of human activity on the oceans.</li>
-                        <li><strong>The Blue Planet</strong> - Andrew Byatt, Alastair Fothergill, Martha Holmes: Showcases the biodiversity of the oceans.</li>
-                        <li><strong>The Sea Around Us</strong> - Rachel Carson: A classic exploration of the oceans’ physical and biological aspects.</li>
-                        <li><strong>Oceanography: An Invitation to Marine Science</strong> - Tom Garrison: A comprehensive guide to marine science.</li>
-                        <li><strong>The Silent World</strong> - Jacques Cousteau: Chronicles underwater explorations and research.</li>
-                    </ul>
-                </div>
+/* تصميم الأكورديون */
+.accordion-item {
+    background-color: #005082;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
 
-                <button class="accordion-item">Join Us! 👨‍⚕️</button>
-                <div class="content">
-                    <p>Want to join us? Fill out this form: <a href="https://forms.office.com/r/kZcZW1GkEP" target="_blank">Join Us Form</a></p>
-                </div>
+.accordion-item:hover {
+    background-color: #0096c7;
+}
 
-                <button class="accordion-item">Help Department and Sharing Ideas 👮</button>
-                <div class="content">
-                    <p>Have a problem? Fill out this form: <a href="https://forms.office.com/r/KZedmYMfWy" target="_blank">Help Form</a></p>
-                    <p>Want to share your ideas? Submit them here: <a href="https://forms.office.com/r/qwCWSAXGhu" target="_blank">Ideas Form</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 ELITE ROBOT. Al-Ibdaa</p>
-    </footer>
-    <div class="bubbles">
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-        <span class="bubble"></span>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
+/* محتوى الأكورديون */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 15px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+}
 
-            accordionItems.forEach(button => {
-                button.addEventListener('click', () => {
-                    const content = button.nextElementSibling;
+/* عرض النص عند الفتح */
+.content.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+}
 
-                    if (content.classList.contains('show')) {
-                        // Close the item
-                        content.classList.remove('show');
-                        content.style.transition = 'max-height 0.5s ease-out';
-                        content.style.maxHeight = '0';
-                    } else {
-                        // Close all other items
-                        document.querySelectorAll('.content').forEach(div => {
-                            div.classList.remove('show');
-                            div.style.maxHeight = '0';
-                        });
+/* الفقاعات */
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-                        // Open the current item
-                        content.classList.add('show');
-                        content.style.transition = 'max-height 0.5s ease-in';
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(173, 216, 230, 0.6);
+    border-radius: 50%;
+    animation: rise 5s infinite ease-in;
+}
+
+.bubble:nth-child(2) {
+    left: 20%;
+    animation-duration: 6s;
+    width: 25px;
+    height: 25px;
+}
+
+.bubble:nth-child(3) {
+    left: 40%;
+    animation-duration: 4s;
+    width: 15px;
+    height: 15px;
+}
+
+.bubble:nth-child(4) {
+    left: 60%;
+    animation-duration: 7s;
+    width: 30px;
+    height: 30px;
+}
+
+.bubble:nth-child(5) {
+    left: 80%;
+    animation-duration: 5s;
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(100%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* الفوتر */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+header {
+    /* المحاذاة والإعدادات السابقة */
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ */
+
+    /* إضافة خلفية متدرجة جذّابة */
+    background: linear-gradient(135deg, #87CEFA, #1E90FF); 
+    /* يمكنك اختيار تدرج مختلف بالألوان التي تفضلها */
+
+    /* جعل الحواف السفلية دائرية */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    /* إضافة ظلّ أسفل العنوان لإبرازه */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-20px, 30px);
+    }
+    50% {
+        transform: translate(30px, -20px);
+    }
+    75% {
+        transform: translate(-30px, -30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.emoji {
+    position: absolute;
+    animation: float 8s infinite ease-in-out;
+    user-select: none;
+    pointer-events: none;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.content.show {
+    overflow: visible;
+}
+
+.logo-container {
+    position: fixed;
+    bottom: 20px; /* المسافة من الأسفل */
+    right: 20px; /* المسافة من اليمين */
+    z-index: 1000; /* لضمان ظهور الشعار فوق كل العناصر الأخرى */
+    background: rgba(255, 255, 255, 0.8); /* خلفية شفافة للشعار */
+    border-radius: 10px; /* حواف مستديرة */
+    padding: 5px; /* مسافة داخلية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف لإبراز الشعار */
+}
+
+.logo-container img {
+    width: 80px; /* ضبط حجم الشعار */
+    height: auto; /* للحفاظ على الأبعاد النسبية */
+    display: block;
+}
+
+.logo-container:hover {
+    transform: scale(1.1); /* تكبير بسيط عند التمرير */
+    transition: transform 0.3s ease; /* تأثير سلس */
+}
