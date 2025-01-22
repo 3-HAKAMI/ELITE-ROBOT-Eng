@@ -1,19 +1,35 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite ROBOT Eng</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>🌊 Robot Exploring Ocean Environmental Data 🤖</h1>
-    </header>
-    <main>
-        <section id="content">
-            <div class="accordion">
-               <button class="accordion-item">What's The Problem And How We Gonna Solve It 🦐</button> 
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>ELITE ROBOT Eng</title> 
+
+    <link rel="stylesheet" href="style.css"> 
+
+</head> 
+
+<body> 
+
+    <header> 
+
+        <h1>🌊 Robot Exploring Ocean Environmental Data 🤖</h1> 
+
+    </header> 
+
+    <main> 
+
+        <section id="content"> 
+
+            <div class="accordion"> 
+
+                <button class="accordion-item">What's The Problem And How We Gonna Solve It 🦐</button> 
+
                 <div class="content"> 
 
                     <h2>The Problem</h2> 
@@ -91,20 +107,39 @@
                     </p> 
 
                 </div> 
-                <button class="accordion-item">About Us 👥</button>
-                 <div class="content"> 
+
+  
+
+                <button class="accordion-item">About Us 👥</button> 
+
+                <div class="content"> 
 
                     <p>We are a robotics team consisting of four members: Abdullah Al-Dosari, Mishari Al-Qarni, Amer Hijan, and Abdulmajeed Hakami. Our team is named ELITE ROBOT, and we are all seventh-grade students at Al-Ibdaa School in Jubail Industrial City, Saudi Arabia. Everyone on the team is cooperative and values one another, and each member has outstanding and experienced skills. Some excel in assembly, like Abdullah and Mishari, others shine in programming, like Amer, and one of us stands out in project creation, like Abdulmajeed, who is also the creator of this website. GO ON ELITE ROBOT!</p> 
 
-               </div>
+               </div> 
 
-                <button class="accordion-item">Our Achievements 🥇</button>
+  
+
+                <button class="accordion-item">Our Achievements 🥇</button> 
+
                 <div class="content"> 
 
                     <p>So far, we haven’t achieved any major milestones, but we are determined to succeed in our mission. Stay tuned for updates!</p> 
+
+                
+
+                
+
+                
+
+                    
+
                </div> 
 
-                <button class="accordion-item">Books About Ocean 🌊</button>
+  
+
+                <button class="accordion-item">Books About Ocean 🌊</button> 
+
                 <div class="content"> 
 
                     <p>Looking for books about the ocean? Here are some recommendations:</p> 
@@ -125,23 +160,31 @@
 
                     </ul> 
 
-                </div>
+                </div> 
 
-                <button class="accordion-item">>Join Us! 👨‍⚕️</button>
+  
+
+                <button class="accordion-item">Join Us! 👨‍⚕️</button> 
+
                 <div class="content"> 
 
                     <p>Want to join us? Fill out this form: <a href="https://forms.office.com/r/kZcZW1GkEP" target="_blank">Join Us Form</a></p> 
 
                 </div> 
-                <button class="accordion-item">Help Department and Sharing Ideas 👮</button>
-               <div class="content"> 
+
+  
+
+                <button class="accordion-item">Help Department and Sharing Ideas 👮</button> 
+
+                <div class="content"> 
 
                     <p>Have a problem? Fill out this form: <a href="https://forms.office.com/r/KZedmYMfWy" target="_blank">Help Form</a></p> 
 
                     <p>Want to share your ideas? Submit them here: <a href="https://forms.office.com/r/qwCWSAXGhu" target="_blank">Ideas Form</a></p> 
 
                 </div> 
-             </div> 
+
+            </div> 
 
         </section> 
 
@@ -166,37 +209,73 @@
         <span class="bubble"></span> 
 
     </div> 
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionItems = document.querySelectorAll('.accordion-item');
 
-            accordionItems.forEach(button => {
-                button.addEventListener('click', () => {
-                    const content = button.nextElementSibling;
+    <script> 
 
-                    if (content.classList.contains('show')) {
-                        // Close the item
-                        content.classList.remove('show');
-                        content.style.transition = 'max-height 0.5s ease-out';
-                        content.style.maxHeight = '0';
-                    } else {
-                        // Close all other items
-                        document.querySelectorAll('.content').forEach(div => {
-                            div.classList.remove('show');
-                            div.style.maxHeight = '0';
-                        });
+        document.addEventListener('DOMContentLoaded', () => { 
 
-                        // Open the current item
-                        content.classList.add('show');
-                        content.style.transition = 'max-height 0.5s ease-in';
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+            const accordionItems = document.querySelectorAll('.accordion-item'); 
 
-<div class="top-right-text">
-    <a href="ddddddd" target="_blank">English</a>
+  
+
+            accordionItems.forEach(button => { 
+
+                button.addEventListener('click', () => { 
+
+                    const content = button.nextElementSibling; 
+
+  
+
+                    if (content.classList.contains('show')) { 
+
+                        // Close the item 
+
+                        content.classList.remove('show'); 
+
+                        content.style.transition = 'max-height 0.5s ease-out'; 
+
+                        content.style.maxHeight = '0'; 
+
+                    } else { 
+
+                        // Close all other items 
+
+                        document.querySelectorAll('.content').forEach(div => { 
+
+                            div.classList.remove('show'); 
+
+                            div.style.maxHeight = '0'; 
+
+                        }); 
+
+  
+
+                        // Open the current item 
+
+                        content.classList.add('show'); 
+
+                        content.style.transition = 'max-height 0.5s ease-in'; 
+
+                        content.style.maxHeight = content.scrollHeight + 'px'; 
+
+                    } 
+
+                }); 
+
+            }); 
+
+        }); 
+
+    </script> 
+
+</body> 
+
+</html> 
+
+  
+
+<div class="top-right-text"> 
+
+    <a href="https://3-hakami.github.io/ocean/" target="_blank">Arabic</a> 
+
 </div>
